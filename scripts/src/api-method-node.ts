@@ -97,7 +97,9 @@ export class APIMethodNode {
       code += `};\n`;
     }
 
-
+    if (this.isRootNode) {
+      code += "};\n";
+    }
 
     return code;
   }
