@@ -92,14 +92,8 @@ export class APIMethodNode {
       code += `};\n`;
     }
 
-    // api node that is not a method, but has child nodes
-    if (!this.isMethod && this.childNodes.length > 0 && !this.isRootNode) {
-      code += `};\n`;
-    }
 
-    if (this.isRootNode) {
-      code += "};\n";
-    }
+
 
     return code;
   }
